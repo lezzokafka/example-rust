@@ -1,0 +1,28 @@
+start_time        : 1579138967
+last_update       : 1579139224
+fuzzer_pid        : 45095
+cycles_done       : 412
+execs_done        : 2845458
+execs_per_sec     : 2.20
+paths_total       : 6
+paths_favored     : 6
+paths_found       : 5
+paths_imported    : 0
+max_depth         : 5
+cur_path          : 5
+pending_favs      : 0
+pending_total     : 0
+variable_paths    : 1
+stability         : 94.29%
+bitmap_cvg        : 0.05%
+unique_crashes    : 1
+unique_hangs      : 0
+last_path         : 1579138979
+last_crash        : 1579139027
+last_hang         : 0
+execs_since_crash : 2121514
+exec_timeout      : 20
+afl_banner        : fuzz_parse_complex
+afl_version       : 2.52b
+target_mode       : persistent deferred 
+command_line      : /Users/lesliecheung/.local/share/afl.rs/rustc-1.42.0-nightly-8a87b94/afl.rs-0.5.2/afl/bin/afl-fuzz -i in -o out target/debug/fuzz_parse_complex

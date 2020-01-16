@@ -1,9 +1,25 @@
-[package]
-name = "example-rust"
-version = "0.1.0"
-authors = ["Yevgeny Pats <yp@fuzzit.dev>"]
-edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[package]
+name = "example-rust-fuzz"
+version = "0.0.1"
+authors = ["Automatically generated"]
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.example-rust]
+path = ".."
+[dependencies.libfuzzer-sys]
+git = "https://github.com/rust-fuzz/libfuzzer-sys.git"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_parse_complex"
+path = "fuzz_targets/fuzz_parse_complex.rs"
 
 [dependencies]
+afl = "0.5.2 "
